@@ -22,3 +22,15 @@
 ## 八、Promise
 
 ## 九、 模块 Modules
+
+function*声明 (function关键字后跟一个星号）定义了一个 生成器函数 ( generator function )，它返回一个  Generator  对象。
+
+也可以定义  生成器函数  使用构造函数  GeneratorFunction 和一个  function* expression
+
+ES5
+
+forEach(), filter(), reduce(), every() 和some()都会跳过空位。
+map()会跳过空位，但会保留这个值
+join()和toString()会将空位视为undefined，而undefined和null会被处理成空字符串。
+
+ES6 中都会将空位当做undefined

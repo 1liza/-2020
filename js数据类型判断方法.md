@@ -2,11 +2,32 @@
 
 ## 数据类型
 
-基本类型：String、Number、Boolean、Symbol、Undefined、Null 
+基本类型：String、Number、Boolean、Symbol、Undefined、Null
 
-引用类型：Object
+复杂（引用）数据类型：Object，Array，Function，RegExp，Date，Error
+
+全局数据类型：Math
 
 ![img](img/数据类型.jpg)
+
+原生具备 Iterator 接口的数据结构如下。
+
+Array
+Map
+Set
+String
+TypedArray
+函数的 arguments 对象
+NodeList 对象
+
+Boolean类型转换：
+    1.对于String:只有非空字符串为真
+    2.对于Number:除了0和NaN之外都为真
+    3.对于Boolean:true为真
+    4.对于Object:除了null之外都为真
+    5.undefined为false;
+
+基本类型变量用八字节内存
 
 ## 1、typeof
 
@@ -50,3 +71,61 @@ F 利用原型对象上的 constructor 引用了自身，当 F 作为构造函�
 ## 4、toString
 
 toString() 是 Object 的原型方法，调用该方法，默认返回当前对象的 [[Class]] 。这是一个内部属性，其格式为 [object Xxx] ，其中 Xxx 就是对象的类型。
+
+- 属性
+length
+
+- 方法
+
+- 改变原数组
+
+1. 移除数组末尾最后一项.pop()
+返回删除的元素
+如果你在一个空数组上调用 pop()，它返回 undefined
+2. 在数组末尾添加一个或多个元素.push()
+返回修改后数组长度
+3. 移除数组第一项.shift()
+返回移除的元素
+4. 在数组头部添加一个或多个元素.unshift()
+返回修改后数组长度
+5. 对数组元素排序.sort()
+返回排序后的数组
+默认排序顺序是根据字符串Unicode码点
+6. 颠倒数组元素.reverse()
+返回颠倒后的数组
+7. 删除或插入元素.splice()
+返回数组删除的项
+没有删除的项，返回空数组
+
+- 不改变原数组
+
+1. 合并两个或多个数组.concat()
+返回新数组
+2. 将数组所有元素连接成一个字符串.join()
+返回连接后的字符串
+3. 截取数组元素到新数组中.slice()
+返回新数组
+4. 获取查询元素第一次出现的索引.indexOf()
+找不到查询元素，则返回-1
+5. 获取查询元素最后一次出现的索引.lastIndexOf()
+找不到查询元素，则返回-1
+6. toString()返回由数组每个元素的字符串形式拼接而成的以逗号分隔的字符串
+7. toLocaleString()返回一个字符串表示数组中的元素
+
+- 迭代方法
+每个方法接受含有三个参数的函数，三个参数为：数组中的项，元素索引，数组本身
+
+1.every()，数组所有元素都满足要求则返回true，否则返回false
+2.some()，只要有满足要求的就返回true
+3.filter()，返回过滤后的结果数组
+4.map()，返回在函数中处理过的数组
+5.forEach()，遍历整个数组
+
+```js
+var map = Array.prototype.map
+var a = map.call("Hello World", function(x) { 
+  return x.charCodeAt(0); 
+})
+// a的值为[72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+```
+
