@@ -27,6 +27,7 @@ b标签效果。表示的文本风格不同于正常的文本，没有表达任�
 mark的效果如下图。<mark>表现为高亮文本。例如我们在网页上查找关键字时，找到的结果就会以高亮的形式展现。
 
 ### HTML5新标签
+
 section
 表示文档中的一个区域（或节），比如，内容中的一个专题组，一般来说会有包含一个标题（heading）。一般通过是否包含一个标题 (<h1>-<h6> element) 作为子节点来辨识每一个<section>。一般来说，一个 <section> 应该出现在文档大纲中。
 
@@ -34,6 +35,7 @@ artical
 <article>元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。
 
 ### 不同标签的区别
+
 em vs i
 虽然em标签也是显示为斜体的效果，但不能说因为效果一样就使用i标签来代替em标签。因为二者表示的含义不同。
 举个例子。em标签：just do it already!
@@ -46,7 +48,7 @@ em vs strong
 strong vs b
 strong 和 b 算是最相似的两个元素了。那么二者之间的差别。strong表示的是一种逻辑状态，而bold表示的是物理状态。逻辑状态是从内容中分离出来，以各种不同的形式来展现，可能你想标记为红色或者下划线或者其他，那么改变strong的属性比改变bold的属性更有意义。因为bold只是making bold，并不做任何重点性强调性的区分。
 
-### 写HTML代码时应注意什么？
+### 写HTML代码时应注意什么
 
 尽可能少的使用无语义的标签div和span；
 在语义不明显时，既可以使用div或者p时，尽量用p, 因为p在默认情况下有上下间距，对兼容特殊终端有利；
@@ -58,9 +60,9 @@ strong 和 b 算是最相似的两个元素了。那么二者之间的差别。s
 
 ## 属性继承
 
-继承就是指子节点默认使用父节点的样式属性。 
-可以继承的属性很少，只有颜色，文字，字体间距行高对齐方式，和列表的样式可以继承。 
-所有元素可继承：visibility和cursor。 
-内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、font-family、font-size、font-style、font-variant、font-weight、text-decoration、text-transform、direction。 
-终端块状元素可继承：text-indent和text-align。 
-列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。
+继承就是指子节点默认使用父节点的样式属性。
+可以继承的属性很少，只有颜色，文字，字体间距行高对齐方式，和列表的样式可以继承。
+所有元素可继承：visibility和cursor。
+内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、font-family、font-size、font-style、font-variant、font-weight、text-decoration、text-transform、direction。
+终端块状元素可继承：text-indent和text-align。
+列表元素可继承：list-style、list-style-type、list-style-position、list-style-image
